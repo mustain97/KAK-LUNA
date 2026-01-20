@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>KAK LUNA – Kalkulator Dapur Terencana</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div style="text-align:center;">
+  <img src="assets/logo.png" alt="Logo KAK LUNA" style="width:80px; margin-bottom:8px;">
+  <h1>KAK LUNA</h1>
+</div>
+
+    <p style="text-align:center;">Kalkulator Kebutuhan Dapur Terencana</p>
+
+    <div class="card">
+      <h2>Profil Keluarga</h2>
+      <input id="anggota" type="number" placeholder="Jumlah Anggota Keluarga">
+      <select id="porsi">
+        <option value="kecil">Porsi Kecil</option>
+        <option value="sedang">Porsi Sedang</option>
+        <option value="besar">Porsi Besar</option>
+      </select>
+      <button onclick="simpanProfil()">Simpan Profil</button>
+    </div>
+
+    <div class="card">
+  <h2>Meal Plan</h2>
+  <select id="menuSelect">
+    <option value="">-- Pilih Menu --</option>
+    <option>Nasi Goreng</option>
+    <option>Sayur Asem</option>
+    <option>Tumis Kangkung</option>
+    <option>Ayam Goreng</option>
+  </select>
+  <button onclick="tambahMenu()">Tambah ke Rencana</button>
+  <ul id="menuList"></ul>
+  <button onclick="resetMenu()" style="background:#c62828;">Ganti Rencana Mingguan</button>
+</div>
+
+
+    <div class="card">
+      <h2>Pantry Check</h2>
+      <input id="beras" type="number" placeholder="Beras (gram)">
+      <input id="cabai" type="number" placeholder="Cabai (gram)">
+      <input id="minyak" type="number" placeholder="Minyak (ml)">
+      <button onclick="simpanPantry()">Simpan Stok</button>
+      <button onclick="resetPantry()" style="background:#c62828;">Reset Stok Dapur</button>
+    </div>
+
+    <div class="card">
+      <h2>Shopping List</h2>
+      <ul id="list"></ul>
+      <button onclick="hitungBelanja()">Hitung Daftar Belanja</button>
+      <button onclick="exportPDF()">Export ke PDF</button>
+    </div>
+
+    <div class="card">
+      <h2>Eco Report</h2>
+      <p id="hematUang">Hemat Uang: -</p>
+      <p id="hematSampah">Sampah Dihindari: -</p>
+      <button onclick="hitungEco()">Lihat Dampak</button>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+
+</html>

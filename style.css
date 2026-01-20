@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f7f4;
+}
+
+.container {
+  max-width: 420px;
+  margin: auto;
+  padding: 16px;
+}
+
+h1 {
+  text-align: center;
+  color: #2e7d32;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #388e3c;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #256628;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+p {
+  font-size: 14px;
+}
+
+#list {
+  max-height: 140px;   /* tinggi area list */
+  overflow-y: auto;   /* scroll ke bawah */
+  margin-top: 8px;
+  padding-left: 18px;
+}
+
+#menuList {
+  max-height: 100px;
+  overflow-y: auto;
+  margin-top: 6px;
+}
